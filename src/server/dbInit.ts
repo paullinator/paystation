@@ -2,14 +2,27 @@ import type { SetupDatabaseOptions } from 'edge-server-tools'
 import { connectCouch, setupDatabase } from 'edge-server-tools'
 
 import {
+  inventoryDatabaseSetup,
+  itemsDatabaseSetup,
+  paymentsDatabaseSetup,
+  salesDatabaseSetup,
   settingsDatabaseSetup,
   settingsReplication,
-  transactionsDatabaseSetup
+  storesDatabaseSetup,
+  vendorsDatabaseSetup
 } from './db/couch'
 import { serverConfig } from './serverConfig'
 import { logger } from './util/utils'
 
-const databases = [settingsDatabaseSetup, transactionsDatabaseSetup]
+const databases = [
+  settingsDatabaseSetup,
+  vendorsDatabaseSetup,
+  storesDatabaseSetup,
+  itemsDatabaseSetup,
+  inventoryDatabaseSetup,
+  salesDatabaseSetup,
+  paymentsDatabaseSetup
+]
 
 const options: SetupDatabaseOptions = {
   replicatorSetup: settingsReplication
