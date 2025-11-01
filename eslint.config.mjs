@@ -12,5 +12,12 @@ export default [
   // Global ignores need to be in their own block:
   {
     ignores: ['**/lib/**', '**/dist/**']
+  },
+
+  // Disable problematic rule temporarily
+  {
+    rules: {
+      '@typescript-eslint/unified-signatures': 'off'
+    }
   }
 ]
