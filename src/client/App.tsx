@@ -1,8 +1,9 @@
 import React from 'react'
-import { Image, View } from 'react-native'
+import { Image, Text, View } from 'react-native'
 import { cacheStyles } from 'react-native-patina'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
+import { lstrings } from './strings'
 import { useTheme } from './themes/ThemeContext'
 import type { Theme } from './types/theme'
 
@@ -13,6 +14,7 @@ const Home: React.FC = () => {
   return (
     <View style={styles.app}>
       <View style={styles.logoContainer}>
+        <Text>{lstrings.hello_world}</Text>
         <Image
           source={{ uri: '/assets/images/edge_logo.png' }}
           style={styles.edgeLogo}

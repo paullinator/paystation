@@ -34,6 +34,7 @@
     "cleaners": "^0.3.9",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-native-localize": "^3.6.0",
     "react-native-patina": "^0.1.6",
     "ws": "^8.18.3"
   },
